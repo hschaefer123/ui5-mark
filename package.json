@@ -18,14 +18,17 @@
 		"build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
 		"deploy": "fiori verify",
 		"deploy-config": "fiori add deploy-config",
+		"copy:mark": "copyfiles -f node_modules/mark.js/dist/mark.min.js webapp/control/3rd",
 		"unit-tests": "fiori run --open test/unit/unitTests.qunit.html",
 		"int-tests": "fiori run --open test/integration/opaTests.qunit.html"
 	},
 	"devDependencies": {
+		"@sap/ux-ui5-tooling": "1",
 		"@ui5/cli": "^2.11.1",
 		"@ui5/fs": "^2.0.6",
 		"@ui5/logger": "^2.0.1",
-		"@sap/ux-ui5-tooling": "1",
+		"copyfiles": "^2.4.1",
+		"mark.js": "^8.11.1",
 		"rimraf": "3.0.2"
 	},
 	"ui5": {
