@@ -18,4 +18,4 @@ npm install
 ```
 
 ## Hints
-Peter Müssig gracefully added an example of using the [UI5 Tooling Extensions for NPM Package Consumption]()https://www.npmjs.com/package/ui5-tooling-modules to reference 3rd party libs from project. Just merged his pull request to repo to make it available by default.
+Peter Müssig gracefully added an example of using the [UI5 Tooling Extensions for NPM Package Consumption](https://www.npmjs.com/package/ui5-tooling-modules) to reference 3rd party libs from project. Just merged his pull request to repo to make it available by default.
