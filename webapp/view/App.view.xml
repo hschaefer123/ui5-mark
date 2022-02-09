@@ -1,0 +1,42 @@
+<mvc:View controllerName="udina.sample.ui5mark.controller.App" displayBlock="true"
+    xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form">
+	<App id="app">
+		<Page id="page" title="{i18n>title}" class="sapUiContentPadding">
+			<subHeader>
+				<Toolbar>
+					<Label text="Search:"/>
+					<SearchField id="query" value="Lo" liveChange="onSearch" width="12rem"/>
+					<Button text="Mark" press=".onMark"/>
+					<Button text="Unmark" press=".onUnmark"/>
+				</Toolbar>
+			</subHeader>
+			<VBox renderType="Bare">
+				<MessageStrip class="sapUiSmallMarginBottom" showIcon="true"
+					text="Post render DOM manipulation with mark.js to highlight search query results"/>
+				<f:SimpleForm layout="ResponsiveGridLayout">
+					<Label text="Title" />
+					<Title class="ucUiMark" text="{ui>/text}"/>
+					<Label class="ucUiMark" text="{ui>/text}" />
+					<Text class="ucUiMark" text="{ui>/text}"/>
+					<Label text="StandardListItem" />
+					<StandardListItem class="ucUiMark"
+						title="{ui>/text}" description="{ui>/text}" info="{ui>/text}"/>
+					<Label text="DisplayListItem (skip label)"/>
+					<DisplayListItem class="ucUiMark" label="{ui>/text}" value="{ui>/text}"/>
+					<Label text="IconTabBar (select handler)"/>
+					<IconTabBar class="sapUiResponsiveContentPadding" headerMode="Inline" 
+						expanded="true" expandable="false" select=".onTabSelectMark">
+						<items>
+							<IconTabFilter text="Formatted">
+								<FormattedText class="ucUiMark" htmlText="{ui>/formattedText}"/>	
+							</IconTabFilter>			
+							<IconTabFilter text="Unformatted">
+								<Text class="ucUiMark" text="{ui>/formattedText}"/>	
+							</IconTabFilter>			
+						</items>
+					</IconTabBar>
+				</f:SimpleForm>
+			</VBox>
+		</Page>
+	</App>
+</mvc:View>
