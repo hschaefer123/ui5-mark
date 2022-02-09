@@ -2,8 +2,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel",
-	"udina/sample/ui5mark/control/3rd/mark.min"
-], function (Controller, JSONModel) {
+	"mark.js/dist/mark.min"
+], function (Controller, JSONModel, Mark) {
 	"use strict";
 
 	return Controller.extend("udina.sample.ui5mark.controller.App", {
