@@ -3,6 +3,23 @@ metadata:
   name: 'ui5mark'
 type: application
 builder:
+  bundles:
+    # Override default Component-preload definition to include OSS
+    - bundleDefinition:
+        name: udina/sample/ui5mark/Component-preload.js
+        defaultFileTypes:
+        - ".js"
+        sections:
+        - mode: preload
+          filters:
+          - "udina/sample/ui5mark/"
+          - "!udina/sample/ui5mark/localService/"
+          - "!udina/sample/ui5mark/test/"
+          - "!udina/sample/ui5mark/*.html"
+          - "mark.js/"
+          sort: true
+      bundleOptions:
+        optimize: true
   customTasks:
     - name: ui5-tooling-modules-task
       afterTask: replaceVersion
